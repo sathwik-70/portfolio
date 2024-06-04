@@ -77,7 +77,7 @@ const Projects = () => {
       tech: ['React.js', 'Node.js', 'QR Code API', 'Healthcare', 'Security'],
       status: 'Completed',
       github: 'https://github.com/sathwik-70/QuRe',
-      live: null,
+      live: 'https://qure.netlify.app',
       color: 'from-blue-500 to-indigo-500',
       glowColor: 'blue',
       isUpcoming: false,

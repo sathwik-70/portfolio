@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Linkedin, Instagram, Send, MapPin, Clock, Coffee, Zap, MessageCircle, Cpu, HardDrive, Monitor } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ const Contact = () => {
   });
 
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error' | null, message: string}>({ type: null, message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -18,9 +21,26 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.currentTarget,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      setSubmitStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus({ type: 'error', message: 'Failed to send message. Please try again or email me directly.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -238,17 +258,28 @@ const Contact = () => {
                       required
                     ></textarea>
                   </div>
+
+                  {submitStatus.type && (
+                    <div className={`p-4 rounded-lg text-sm font-bold ${submitStatus.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                      {submitStatus.message}
+                    </div>
+                  )}
                   
                   <button
                     type="submit"
-                    className="group relative w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-4 px-4 rounded-lg hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/40 flex items-center justify-center space-x-2 overflow-hidden transform-gpu"
+                    disabled={isSubmitting}
+                    className={`group relative w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-4 px-4 rounded-lg transition-all duration-500 flex items-center justify-center space-x-2 overflow-hidden transform-gpu ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40'}`}
                   >
                     <span className="relative z-10 flex items-center space-x-2">
-                      <span>Send Message</span>
-                      <Send size={18} className="group-hover:translate-x-1 group-hover:rotate-12 transition-all duration-300" />
+                      <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                      {!isSubmitting && <Send size={18} className="group-hover:translate-x-1 group-hover:rotate-12 transition-all duration-300" />}
                     </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    {!isSubmitting && (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                      </>
+                    )}
                   </button>
                 </form>
               </div>
