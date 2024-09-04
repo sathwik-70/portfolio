@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X, Sparkles, User } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -185,7 +185,7 @@ const Navigation = () => {
             </div>
             
             {/* Enhanced Desktop Navigation with Impressive Colors */}
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center space-x-4">
               <div className="ml-10 flex items-baseline space-x-1">
                 {navItems.map((item) => (
                   <button
@@ -214,13 +214,31 @@ const Navigation = () => {
                   </button>
                 ))}
               </div>
+              
+              {/* User Icon */}
+              <button className="group relative p-3 rounded-full bg-gradient-to-r from-gray-800/60 via-blue-800/60 to-purple-800/60 backdrop-blur-sm border border-cyan-400/30 text-gray-300 hover:text-white hover:border-cyan-400/60 transition-all duration-700 hover:scale-110 transform-gpu shadow-lg hover:shadow-cyan-500/30 ml-4">
+                <div className="relative z-10 transition-transform duration-500">
+                  <User size={20} />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-blue-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 rounded-full transition-all duration-700"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
+              </button>
             </div>
 
             {/* Enhanced Mobile menu button with Impressive Effects */}
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center space-x-4">
+              {/* User Icon */}
+              <button className="group relative p-2 rounded-full bg-gradient-to-r from-gray-800/60 via-blue-800/60 to-purple-800/60 backdrop-blur-sm border border-cyan-400/30 text-gray-300 hover:text-white hover:border-cyan-400/60 transition-all duration-700 hover:scale-110 transform-gpu shadow-lg hover:shadow-cyan-500/30">
+                <div className="relative z-10 transition-transform duration-500">
+                  <User size={20} />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-blue-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 rounded-full transition-all duration-700"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
+              </button>
+              
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="group relative p-4 rounded-2xl bg-gradient-to-r from-gray-800/60 via-blue-800/60 to-purple-800/60 backdrop-blur-sm border border-cyan-400/30 text-gray-300 hover:text-white hover:border-cyan-400/60 transition-all duration-700 hover:scale-110 transform-gpu shadow-lg hover:shadow-cyan-500/30"
+                className="group relative p-3 rounded-2xl bg-gradient-to-r from-gray-800/60 via-blue-800/60 to-purple-800/60 backdrop-blur-sm border border-cyan-400/30 text-gray-300 hover:text-white hover:border-cyan-400/60 transition-all duration-700 hover:scale-110 transform-gpu shadow-lg hover:shadow-cyan-500/30"
               >
                 <div className="relative z-10 transition-transform duration-500">
                   {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
