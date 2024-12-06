@@ -51,7 +51,7 @@ const Projects = () => {
       tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Authentication'],
       status: 'Completed',
       github: 'https://github.com/sathwik-70/BookHub',
-      live: null,
+      live: 'https://dbookhub.netlify.app',
       color: 'from-emerald-500 to-teal-500',
       glowColor: 'emerald',
       isUpcoming: false,
