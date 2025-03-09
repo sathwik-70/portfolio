@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, CheckCircle2, Clock, Mic, Brain, Coins, BookOpen, Home, QrCode, Zap, Code2, Star, Atom, Cpu, HardDrive, Monitor } from 'lucide-react';
+import { Github, ExternalLink, CheckCircle2, Clock, Mic, Brain, Coins, BookOpen, Home, QrCode, Star, Cpu, HardDrive, Monitor, Eye, GraduationCap } from 'lucide-react';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -80,6 +80,32 @@ const Projects = () => {
       live: 'https://qure.netlify.app',
       color: 'from-blue-500 to-indigo-500',
       glowColor: 'blue',
+      isUpcoming: false,
+      progress: 100
+    },
+    {
+      icon: <Eye size={28} />,
+      name: 'IDRiD — Diabetic Retinopathy Analysis System',
+      description: 'A comprehensive Deep Learning solution for automated diagnosis of Diabetic Retinopathy using the IDRiD dataset. Features disease severity grading (95.88% accuracy), lesion segmentation with U-Net, and optic disc/fovea localization with ResNet-18.',
+      tech: ['Python', 'EfficientNet-B0', 'U-Net', 'ResNet-18', 'Streamlit', 'Deep Learning'],
+      status: 'Completed',
+      github: 'https://github.com/sathwik-70/Diabetic-Retinopathy',
+      live: 'https://diabeticretinopathy404.streamlit.app/',
+      color: 'from-rose-500 to-pink-600',
+      glowColor: 'red',
+      isUpcoming: false,
+      progress: 100
+    },
+    {
+      icon: <GraduationCap size={28} />,
+      name: 'Smart Placement Portal — Next-Gen Edition',
+      description: 'A production-ready MERN stack placement portal featuring AI-driven job recommendations via Python/Flask ML service, role-based dashboards for Students, Companies & Admins, JWT authentication with OTP verification, and a premium glassmorphic UI.',
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Python', 'Flask', 'Machine Learning'],
+      status: 'Completed',
+      github: 'https://github.com/sathwik-70/smartplacement',
+      live: null,
+      color: 'from-violet-500 to-purple-600',
+      glowColor: 'purple',
       isUpcoming: false,
       progress: 100
     }

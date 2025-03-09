@@ -19,7 +19,7 @@ const Skills = () => {
       title: 'Languages',
       color: 'from-blue-500 to-blue-600',
       glowColor: 'blue',
-      skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'SQL'],
+      skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'SQL', 'CSS'],
       bgPattern: 'code'
     },
     {
@@ -27,7 +27,7 @@ const Skills = () => {
       title: 'Frontend',
       color: 'from-purple-500 to-purple-600',
       glowColor: 'purple',
-      skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Firebase Hosting'],
+      skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Streamlit'],
       bgPattern: 'frontend'
     },
     {
@@ -35,7 +35,7 @@ const Skills = () => {
       title: 'Backend & Databases',
       color: 'from-green-500 to-green-600',
       glowColor: 'green',
-      skills: ['Node.js', 'Express.js', 'MongoDB', 'MySQL', 'Firebase', 'REST APIs'],
+      skills: ['Node.js', 'Express.js', 'Flask', 'MongoDB', 'MySQL', 'Firebase', 'REST APIs', 'JWT Auth'],
       bgPattern: 'database'
     },
     {
@@ -43,7 +43,7 @@ const Skills = () => {
       title: 'AI & Machine Learning',
       color: 'from-red-500 to-red-600',
       glowColor: 'red',
-      skills: ['Python Libraries', 'NumPy', 'Pandas', 'OpenCV', 'Scikit-learn'],
+      skills: ['TensorFlow', 'PyTorch', 'EfficientNet', 'U-Net', 'ResNet', 'OpenCV', 'Scikit-learn', 'NumPy', 'Pandas'],
       bgPattern: 'ai'
     },
     {
@@ -51,7 +51,7 @@ const Skills = () => {
       title: 'Blockchain',
       color: 'from-cyan-500 to-cyan-600',
       glowColor: 'cyan',
-      skills: ['Solana', 'Jupiter Aggregator APIs', 'Anchor Framework'],
+      skills: ['Solana', 'Jupiter Aggregator APIs', 'Anchor Framework', 'Web3.js'],
       bgPattern: 'blockchain'
     },
     {
@@ -59,7 +59,7 @@ const Skills = () => {
       title: 'Cloud & DevOps',
       color: 'from-orange-500 to-orange-600',
       glowColor: 'orange',
-      skills: ['AWS EC2', 'Netlify', 'Vercel', 'Git', 'Linux'],
+      skills: ['Netlify', 'Render', 'Vercel', 'Git & GitHub', 'Linux', 'Nginx'],
       bgPattern: 'cloud'
     }
   ];
@@ -67,8 +67,8 @@ const Skills = () => {
   const proficiencyData = [
     { skill: 'Frontend Development', level: 90, color: 'from-purple-500 to-pink-500' },
     { skill: 'Backend Development', level: 85, color: 'from-green-500 to-emerald-500' },
-    { skill: 'Database Management', level: 80, color: 'from-blue-500 to-cyan-500' },
-    { skill: 'AI/ML Implementation', level: 75, color: 'from-red-500 to-orange-500' },
+    { skill: 'Database Management', level: 82, color: 'from-blue-500 to-cyan-500' },
+    { skill: 'AI/ML & Deep Learning', level: 80, color: 'from-red-500 to-orange-500' },
     { skill: 'Blockchain Development', level: 70, color: 'from-cyan-500 to-blue-500' },
     { skill: 'Cloud & DevOps', level: 75, color: 'from-orange-500 to-yellow-500' }
   ];
