@@ -103,7 +103,7 @@ const Projects = () => {
       tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Python', 'Flask', 'Machine Learning'],
       status: 'Completed',
       github: 'https://github.com/sathwik-70/smartplacement',
-      live: null,
+      live: 'https://cseplacement.onrender.com',
       color: 'from-violet-500 to-purple-600',
       glowColor: 'purple',
       isUpcoming: false,
