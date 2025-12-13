@@ -25,11 +25,11 @@ const Learning = () => {
     },
     {
       icon: <Blocks size={20} />,
-      title: 'Solana Blockchain Development',
-      description: 'Building DeFi applications and smart contracts on Solana',
+      title: 'Cross-Chain dApp Development (Solana + Ethereum)',
+      description: 'Combining Solana and Ethereum ecosystems to architect and build a robust, production-grade decentralized application',
       color: 'from-purple-500 to-purple-600',
       glowColor: 'purple',
-      progress: 60,
+      progress: 50,
       category: 'Blockchain'
     },
     {
