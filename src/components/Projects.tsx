@@ -6,45 +6,6 @@ const Projects = () => {
 
   const projects = [
     {
-      icon: <Mic size={28} />,
-      name: 'Voice-Controlled Android Assistant (Siri Clone)',
-      description: 'A full-fledged Android voice assistant app with wake word detection, voice command execution, system automation, and smart home integration.',
-      tech: ['Android', 'Java/Kotlin', 'Speech Recognition', 'NLP', 'Machine Learning'],
-      status: 'Upcoming',
-      github: 'https://github.com/sathwik-70',
-      live: null,
-      color: 'from-indigo-500 to-purple-500',
-      glowColor: 'indigo',
-      isUpcoming: true,
-      progress: 15
-    },
-    {
-      icon: <Brain size={28} />,
-      name: 'Kidney CT Scan Analyser',
-      description: 'A deep learning-based diagnostic tool for analyzing kidney CT scans, predicting abnormalities using CNNs, with a real-time visual feedback system.',
-      tech: ['Python', 'TensorFlow', 'OpenCV', 'CNN', 'Medical Imaging'],
-      status: 'Completed',
-      github: 'https://github.com/sathwik-70/KidneyScanAnalysis',
-      live: 'https://kidneyscananalysis.netlify.app',
-      color: 'from-red-500 to-pink-500',
-      glowColor: 'red',
-      isUpcoming: false,
-      progress: 100
-    },
-    {
-      icon: <Coins size={28} />,
-      name: 'Jupymate — Solana DeFi Dashboard',
-      description: 'A decentralized finance app for the Solana ecosystem integrating Jupiter APIs for token swaps, portfolio analytics, DCA, and limit order management.',
-      tech: ['React.js', 'Solana Web3.js', 'Jupiter APIs', 'TypeScript', 'DeFi'],
-      status: 'Completed',
-      github: 'https://github.com/sathwik-70/jupymate',
-      live: 'https://jupymate.netlify.app',
-      color: 'from-purple-500 to-cyan-500',
-      glowColor: 'purple',
-      isUpcoming: false,
-      progress: 100
-    },
-    {
       icon: <BookOpen size={28} />,
       name: 'BookHub — E-Library Management Application',
       description: 'A React.js-based digital library platform for browsing, borrowing, and managing digital books. Includes an admin dashboard for inventory control, user authentication, and responsive design for mobile-friendly book browsing.',
@@ -108,7 +69,46 @@ const Projects = () => {
       glowColor: 'purple',
       isUpcoming: false,
       progress: 100
-    }
+    },
+    {
+      icon: <Coins size={28} />,
+      name: 'Jupymate — Solana DeFi Dashboard',
+      description: 'A decentralized finance app for the Solana ecosystem integrating Jupiter APIs for token swaps, portfolio analytics, DCA, and limit order management.',
+      tech: ['React.js', 'Solana Web3.js', 'Jupiter APIs', 'TypeScript', 'DeFi'],
+      status: 'Completed',
+      github: 'https://github.com/sathwik-70/jupymate',
+      live: 'https://jupymate.netlify.app',
+      color: 'from-purple-500 to-cyan-500',
+      glowColor: 'purple',
+      isUpcoming: false,
+      progress: 100
+    },
+    {
+      icon: <Brain size={28} />,
+      name: 'Kidney CT Scan Analyser',
+      description: 'A deep learning-based diagnostic tool for analyzing kidney CT scans, predicting abnormalities using CNNs, with a real-time visual feedback system.',
+      tech: ['Python', 'TensorFlow', 'OpenCV', 'CNN', 'Medical Imaging'],
+      status: 'Completed',
+      github: 'https://github.com/sathwik-70/KidneyScanAnalysis',
+      live: 'https://kidneyscananalysis.netlify.app',
+      color: 'from-red-500 to-pink-500',
+      glowColor: 'red',
+      isUpcoming: false,
+      progress: 100
+    },
+    {
+      icon: <Mic size={28} />,
+      name: 'Voice-Controlled Android Assistant (Siri Clone)',
+      description: 'A full-fledged Android voice assistant app with wake word detection, voice command execution, system automation, and smart home integration.',
+      tech: ['Android', 'Java/Kotlin', 'Speech Recognition', 'NLP', 'Machine Learning'],
+      status: 'Upcoming',
+      github: 'https://github.com/sathwik-70',
+      live: null,
+      color: 'from-indigo-500 to-purple-500',
+      glowColor: 'indigo',
+      isUpcoming: true,
+      progress: 15
+    },
   ];
 
   const hardwareElements = [
