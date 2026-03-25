@@ -197,7 +197,7 @@ const Hero = () => {
               <div className="absolute -inset-4 border border-cyan-400/30 rounded-full animate-rotate-slow"></div>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-black mb-8 relative leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 md:mb-8 relative leading-tight">
               <span className="text-white drop-shadow-xl tracking-tight">Hi, I'm </span>
               <div className="relative inline-block">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 via-pink-500 to-rose-500 bg-clip-text text-transparent animate-gradient-flow bg-400% font-black tracking-tight">
@@ -208,7 +208,7 @@ const Hero = () => {
               </div>
             </h1>
             
-            <div className="text-2xl md:text-3xl text-gray-200 mb-8 space-y-4 animate-text-render animation-delay-700">
+            <div className="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-6 md:mb-8 space-y-4 animate-text-render animation-delay-700">
               <p className="font-bold bg-gradient-to-r from-cyan-300 via-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent leading-relaxed">
                 Full-Stack Developer | AI Explorer | Blockchain Enthusiast
               </p>
@@ -232,10 +232,10 @@ const Hero = () => {
           </div>
 
           {/* Hardware-Styled CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20 animate-text-render animation-delay-2100">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-12 md:mb-20 animate-text-render animation-delay-2100">
             <button
               onClick={scrollToProjects}
-              className="group relative px-12 py-6 bg-gradient-to-r from-cyan-500 via-blue-500 via-purple-600 to-pink-600 text-white font-bold text-lg rounded-2xl overflow-hidden transition-all duration-1000 hover:scale-110 transform-gpu"
+              className="group relative px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-cyan-500 via-blue-500 via-purple-600 to-pink-600 text-white font-bold text-base sm:text-lg rounded-2xl overflow-hidden transition-all duration-1000 hover:scale-110 transform-gpu w-full sm:w-auto"
               style={{
                 boxShadow: '0 20px 40px -8px rgba(59, 130, 246, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
               }}
@@ -251,7 +251,7 @@ const Hero = () => {
             
             <button
               onClick={scrollToContact}
-              className="group relative px-12 py-6 border-2 border-cyan-400/60 text-cyan-400 font-bold text-lg rounded-2xl transition-all duration-1000 hover:border-purple-400/60 hover:text-purple-400 hover:scale-110 backdrop-blur-xl bg-white/10 transform-gpu"
+              className="group relative px-8 sm:px-12 py-4 sm:py-6 border-2 border-cyan-400/60 text-cyan-400 font-bold text-base sm:text-lg rounded-2xl transition-all duration-1000 hover:border-purple-400/60 hover:text-purple-400 hover:scale-110 backdrop-blur-xl bg-white/10 transform-gpu w-full sm:w-auto"
               style={{
                 boxShadow: '0 20px 40px -8px rgba(6, 182, 212, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}
@@ -303,7 +303,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .circuit-board-pattern {
           background-image: 
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
