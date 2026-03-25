@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Code, Database, Brain, Blocks, Cloud, Monitor, Zap, Cpu, Star, Atom, Sparkles, HardDrive, Wifi, MemoryStick } from 'lucide-react';
+import { 
+  SiJavascript, SiTypescript, SiPython, SiCss, SiReact, SiNextdotjs, 
+  SiTailwindcss, SiFramer, SiStreamlit, SiNodedotjs, SiExpress, SiFlask, 
+  SiMongodb, SiMysql, SiFirebase, SiTensorflow, SiPytorch, SiOpencv, 
+  SiScikitlearn, SiNumpy, SiPandas, SiSolana, SiNetlify, SiRender, 
+  SiVercel, SiGithub, SiLinux, SiNginx, SiJsonwebtokens, SiAngular, SiJupyter,
+  SiSupabase, SiIpfs
+} from 'react-icons/si';
+import { 
+  FaJava, FaDatabase, FaNetworkWired, FaBrain, FaProjectDiagram, FaAnchor, FaLink, FaCubes
+} from 'react-icons/fa';
 
 const Skills = () => {
   const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
@@ -19,7 +30,14 @@ const Skills = () => {
       title: 'Languages',
       color: 'from-blue-500 to-blue-600',
       glowColor: 'blue',
-      skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'SQL', 'CSS'],
+      skills: [
+        { name: 'JavaScript', icon: <SiJavascript color="#F7DF1E" /> },
+        { name: 'TypeScript', icon: <SiTypescript color="#3178C6" /> },
+        { name: 'Python', icon: <SiPython color="#3776AB" /> },
+        { name: 'Java', icon: <FaJava color="#ED8B00" /> },
+        { name: 'SQL', icon: <FaDatabase color="#4479A1" /> },
+        { name: 'CSS', icon: <SiCss color="#1572B6" /> }
+      ],
       bgPattern: 'code'
     },
     {
@@ -27,7 +45,14 @@ const Skills = () => {
       title: 'Frontend',
       color: 'from-purple-500 to-purple-600',
       glowColor: 'purple',
-      skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Streamlit'],
+      skills: [
+        { name: 'Angular', icon: <SiAngular color="#DD0031" /> },
+        { name: 'React.js', icon: <SiReact color="#61DAFB" /> },
+        { name: 'Next.js', icon: <SiNextdotjs color="#FFFFFF" /> },
+        { name: 'Tailwind CSS', icon: <SiTailwindcss color="#06B6D4" /> },
+        { name: 'Framer Motion', icon: <SiFramer color="#0055FF" /> },
+        { name: 'Streamlit', icon: <SiStreamlit color="#FF4B4B" /> }
+      ],
       bgPattern: 'frontend'
     },
     {
@@ -35,7 +60,17 @@ const Skills = () => {
       title: 'Backend & Databases',
       color: 'from-green-500 to-green-600',
       glowColor: 'green',
-      skills: ['Node.js', 'Express.js', 'Flask', 'MongoDB', 'MySQL', 'Firebase', 'REST APIs', 'JWT Auth'],
+      skills: [
+        { name: 'Node.js', icon: <SiNodedotjs color="#339933" /> },
+        { name: 'Express.js', icon: <SiExpress color="#FFFFFF" /> },
+        { name: 'Flask', icon: <SiFlask color="#FFFFFF" /> },
+        { name: 'MongoDB', icon: <SiMongodb color="#47A248" /> },
+        { name: 'MySQL', icon: <SiMysql color="#4479A1" /> },
+        { name: 'Firebase', icon: <SiFirebase color="#FFCA28" /> },
+        { name: 'Supabase', icon: <SiSupabase color="#3ECF8E" /> },
+        { name: 'REST APIs', icon: <FaNetworkWired color="#009688" /> },
+        { name: 'JWT Auth', icon: <SiJsonwebtokens color="#FB015B" /> }
+      ],
       bgPattern: 'database'
     },
     {
@@ -43,7 +78,18 @@ const Skills = () => {
       title: 'AI & Machine Learning',
       color: 'from-red-500 to-red-600',
       glowColor: 'red',
-      skills: ['TensorFlow', 'PyTorch', 'EfficientNet', 'U-Net', 'ResNet', 'OpenCV', 'Scikit-learn', 'NumPy', 'Pandas'],
+      skills: [
+        { name: 'TensorFlow', icon: <SiTensorflow color="#FF6F00" /> },
+        { name: 'PyTorch', icon: <SiPytorch color="#EE4C2C" /> },
+        { name: 'EfficientNet', icon: <FaBrain color="#8B5CF6" /> },
+        { name: 'U-Net', icon: <FaBrain color="#10B981" /> },
+        { name: 'ResNet', icon: <FaProjectDiagram color="#3B82F6" /> },
+        { name: 'OpenCV', icon: <SiOpencv color="#5C3EE8" /> },
+        { name: 'Jupyter', icon: <SiJupyter color="#F37626" /> },
+        { name: 'Scikit-learn', icon: <SiScikitlearn color="#F7931E" /> },
+        { name: 'NumPy', icon: <SiNumpy color="#4D77CF" /> },
+        { name: 'Pandas', icon: <SiPandas color="#150458" /> }
+      ],
       bgPattern: 'ai'
     },
     {
@@ -51,7 +97,14 @@ const Skills = () => {
       title: 'Blockchain',
       color: 'from-cyan-500 to-cyan-600',
       glowColor: 'cyan',
-      skills: ['Solana', 'Jupiter Aggregator APIs', 'Anchor Framework', 'Web3.js'],
+      skills: [
+        { name: 'Solana', icon: <SiSolana color="#14F195" /> },
+        { name: 'Ethers.js', icon: <FaCubes color="#2A2A5A" /> },
+        { name: 'IPFS / Pinata', icon: <SiIpfs color="#284457" /> },
+        { name: 'Jupiter Aggregator APIs', icon: <FaLink color="#FBA434" /> },
+        { name: 'Anchor Framework', icon: <FaAnchor color="#FFFFFF" /> },
+        { name: 'Web3.js', icon: <FaCubes color="#F16822" /> }
+      ],
       bgPattern: 'blockchain'
     },
     {
@@ -59,7 +112,14 @@ const Skills = () => {
       title: 'Cloud & DevOps',
       color: 'from-orange-500 to-orange-600',
       glowColor: 'orange',
-      skills: ['Netlify', 'Render', 'Vercel', 'Git & GitHub', 'Linux', 'Nginx'],
+      skills: [
+        { name: 'Netlify', icon: <SiNetlify color="#00C7B7" /> },
+        { name: 'Render', icon: <SiRender color="#46E3B7" /> },
+        { name: 'Vercel', icon: <SiVercel color="#FFFFFF" /> },
+        { name: 'Git & GitHub', icon: <SiGithub color="#FFFFFF" /> },
+        { name: 'Linux', icon: <SiLinux color="#FCC624" /> },
+        { name: 'Nginx', icon: <SiNginx color="#009639" /> }
+      ],
       bgPattern: 'cloud'
     }
   ];
@@ -158,17 +218,18 @@ const Skills = () => {
                   {category.title}
                 </h3>
                 
-                <div className="space-y-2">
+                <div className="flex flex-wrap gap-2 pt-2">
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="group/skill flex items-center space-x-2 p-2 rounded-lg hover:bg-white/10 transition-all duration-500 hover:scale-105 transform-gpu"
+                      className="group/skill flex items-center space-x-2 px-3 py-2 bg-gray-900/40 rounded-lg border border-gray-700/50 hover:bg-white/10 hover:border-gray-500/50 transition-all duration-500 hover:scale-105 transform-gpu"
                     >
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} group-hover/skill:scale-125 group-hover/skill:shadow-lg transition-all duration-500 shadow-${category.glowColor}-500/50`}></div>
-                      <span className="text-gray-300 group-hover/skill:text-white transition-colors duration-500 font-semibold text-sm">
-                        {skill}
+                      <div className={`text-lg opacity-90 group-hover/skill:scale-110 group-hover/skill:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all duration-500`}>
+                        {skill.icon}
+                      </div>
+                      <span className="text-gray-300 group-hover/skill:text-white transition-colors duration-500 font-medium text-sm whitespace-nowrap">
+                        {skill.name}
                       </span>
-                      <div className={`ml-auto w-1.5 h-1.5 rounded-full bg-gradient-to-r ${category.color} opacity-0 group-hover/skill:opacity-100 transition-opacity duration-500`}></div>
                     </div>
                   ))}
                 </div>
@@ -217,7 +278,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .circuit-board-pattern {
           background-image: 
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
