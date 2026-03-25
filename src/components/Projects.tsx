@@ -119,7 +119,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/40 to-purple-50/40 relative overflow-hidden">
+    <section id="projects" className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 relative overflow-hidden">
       {/* Hardware-Themed Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Circuit Board Pattern */}
@@ -127,8 +127,8 @@ const Projects = () => {
           <div className="circuit-pattern"></div>
         </div>
         
-        <div className="absolute top-20 left-10 md:left-20 w-64 h-64 md:w-[400px] md:h-[400px] bg-gradient-to-r from-blue-400/15 to-purple-400/15 rounded-full blur-xl animate-hardware-float"></div>
-        <div className="absolute bottom-20 right-10 md:right-20 w-72 h-72 md:w-[500px] md:h-[500px] bg-gradient-to-r from-cyan-400/15 to-pink-400/15 rounded-full blur-xl animate-hardware-float animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 md:left-20 w-64 h-64 md:w-[400px] md:h-[400px] bg-gradient-to-r from-purple-300/30 to-blue-300/30 rounded-full blur-xl animate-hardware-float"></div>
+        <div className="absolute bottom-20 right-10 md:right-20 w-72 h-72 md:w-[500px] md:h-[500px] bg-gradient-to-r from-pink-300/30 to-indigo-300/30 rounded-full blur-xl animate-hardware-float animation-delay-4000"></div>
         
         {/* Floating Hardware Elements */}
         {hardwareElements.map((element, index) => (
@@ -316,7 +316,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .circuit-pattern {
           background-image: 
             linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),

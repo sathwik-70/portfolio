@@ -24,7 +24,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/40 to-purple-50/40 relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Hardware-Themed Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Circuit Board Pattern */}
@@ -32,9 +32,9 @@ const About = () => {
           <div className="circuit-pattern"></div>
         </div>
         
-        <div className="absolute top-20 left-10 w-48 h-48 md:w-80 md:h-80 bg-gradient-to-r from-blue-400/15 to-purple-400/15 rounded-full blur-xl animate-hardware-float"></div>
-        <div className="absolute bottom-20 right-10 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-cyan-400/15 to-pink-400/15 rounded-full blur-xl animate-hardware-float animation-delay-3000"></div>
-        <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-purple-400/10 to-blue-400/10 rounded-full blur-xl animate-pulse-gentle"></div>
+        <div className="absolute top-20 left-10 w-48 h-48 md:w-80 md:h-80 bg-gradient-to-r from-cyan-300/30 to-blue-300/30 rounded-full blur-xl animate-hardware-float"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-indigo-300/30 to-purple-300/30 rounded-full blur-xl animate-hardware-float animation-delay-3000"></div>
+        <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-blue-200/20 to-cyan-200/20 rounded-full blur-xl animate-pulse-gentle"></div>
         
         {/* Floating Hardware Elements */}
         {hardwareElements.map((element, index) => (
@@ -164,7 +164,7 @@ const About = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .circuit-pattern {
           background-image: 
             linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
