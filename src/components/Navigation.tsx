@@ -169,7 +169,10 @@ const Navigation = () => {
   return (
     <>
       {/* Fixed Navigation Header with Enhanced Colors */}
-      <nav className={`fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 ${
+      <nav
+        role="navigation"
+        aria-label="Main navigation"
+        className={`fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 ${
         isScrolled 
           ? 'bg-gradient-to-r from-slate-900/98 via-gray-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-md shadow-xl shadow-cyan-500/20 border-b border-cyan-500/20' 
           : 'bg-gradient-to-r from-slate-900/80 via-gray-900/80 via-blue-900/80 to-purple-900/80 backdrop-blur-sm shadow-md shadow-blue-500/10'
@@ -183,6 +186,10 @@ const Navigation = () => {
             <div 
               className="flex-shrink-0 group cursor-pointer"
               onClick={() => scrollToSection('hero')}
+              role="button"
+              aria-label="Sathwik Pamu - go to top"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && scrollToSection('hero')}
             >
               <div className="relative">
                 <span className="text-2xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
@@ -203,6 +210,8 @@ const Navigation = () => {
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
                     disabled={isTransitioning}
+                    aria-label={`Navigate to ${item.label} section`}
+                    aria-current={activeSection === item.id ? 'page' : undefined}
                     className={`relative px-6 py-3 rounded-2xl text-sm font-bold transition-all duration-700 group overflow-hidden transform-gpu ${
                       activeSection === item.id
                         ? 'text-white bg-gradient-to-r from-cyan-500/25 via-blue-500/25 via-purple-500/25 to-pink-500/25 backdrop-blur-sm border border-cyan-400/50 shadow-lg shadow-cyan-500/25'

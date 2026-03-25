@@ -11,12 +11,14 @@ function App() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Learning />
-      <Contact />
+      <main id="main-content" aria-label="Main content">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Learning />
+        <Contact />
+      </main>
       
       {/* Ultra-Premium Footer */}
       <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20 relative overflow-hidden">
@@ -48,7 +50,7 @@ function App() {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 animate-fade-in-up animation-delay-500">
               <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
                 <p className="text-gray-400 text-sm font-medium">
-                  © 2024 Sathwik Pamu. Crafted with ❤️ and lots of ☕
+                  © 2026 Sathwik Pamu. Crafted with ❤️ and lots of ☕
                 </p>
                 <div className="flex items-center space-x-6 text-sm text-gray-500">
                   <span className="flex items-center space-x-2">
@@ -114,7 +116,7 @@ function App() {
           </div>
         </div>
 
-        <style jsx>{`
+        <style>{`
           @keyframes float-slow {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(2deg); }
