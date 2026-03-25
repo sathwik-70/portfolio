@@ -126,11 +126,11 @@ const Skills = () => {
 
   const proficiencyData = [
     { skill: 'Frontend Development', level: 90, color: 'from-purple-500 to-pink-500' },
-    { skill: 'Backend Development', level: 85, color: 'from-green-500 to-emerald-500' },
-    { skill: 'Database Management', level: 82, color: 'from-blue-500 to-cyan-500' },
-    { skill: 'AI/ML & Deep Learning', level: 80, color: 'from-red-500 to-orange-500' },
-    { skill: 'Blockchain Development', level: 70, color: 'from-cyan-500 to-blue-500' },
-    { skill: 'Cloud & DevOps', level: 75, color: 'from-orange-500 to-yellow-500' }
+    { skill: 'Backend Development', level: 88, color: 'from-green-500 to-emerald-500' },
+    { skill: 'AI/ML & Deep Learning', level: 85, color: 'from-red-500 to-orange-500' },
+    { skill: 'Database Management', level: 85, color: 'from-blue-500 to-cyan-500' },
+    { skill: 'Blockchain Development', level: 82, color: 'from-cyan-500 to-blue-500' },
+    { skill: 'Cloud & DevOps', level: 80, color: 'from-orange-500 to-yellow-500' }
   ];
 
   const hardwareElements = [

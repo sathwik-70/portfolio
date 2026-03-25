@@ -10,10 +10,10 @@ const About = () => {
   ];
 
   const highlights = [
-    { icon: <Heart className="w-4 h-4" />, text: 'Building AI-powered medical analysis tools', color: 'bg-red-500', glow: 'red' },
-    { icon: <Zap className="w-4 h-4" />, text: 'Real-time auction platform with Socket.io', color: 'bg-blue-500', glow: 'blue' },
-    { icon: <Sparkles className="w-4 h-4" />, text: 'Exploring Solana blockchain development', color: 'bg-purple-500', glow: 'purple' },
-    { icon: <TrendingUp className="w-4 h-4" />, text: 'Data analytics and machine learning projects', color: 'bg-cyan-500', glow: 'cyan' },
+    { icon: <Target className="w-4 h-4" />, text: 'Developed 95.8% accurate Diabetic Retinopathy CNN', color: 'bg-red-500', glow: 'red' },
+    { icon: <Heart className="w-4 h-4" />, text: 'Built an AI-driven Smart Placement Portal', color: 'bg-blue-500', glow: 'blue' },
+    { icon: <Sparkles className="w-4 h-4" />, text: 'Engineered QuRe: QR-powered health records', color: 'bg-purple-500', glow: 'purple' },
+    { icon: <Zap className="w-4 h-4" />, text: 'Created Jupymate: Solana DeFi Dashboard', color: 'bg-cyan-500', glow: 'cyan' },
   ];
 
   const hardwareElements = [
@@ -32,9 +32,9 @@ const About = () => {
           <div className="circuit-pattern"></div>
         </div>
         
-        <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-blue-400/15 to-purple-400/15 rounded-full blur-xl animate-hardware-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cyan-400/15 to-pink-400/15 rounded-full blur-xl animate-hardware-float animation-delay-3000"></div>
-        <div className="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/10 to-blue-400/10 rounded-full blur-xl animate-pulse-gentle"></div>
+        <div className="absolute top-20 left-10 w-48 h-48 md:w-80 md:h-80 bg-gradient-to-r from-blue-400/15 to-purple-400/15 rounded-full blur-xl animate-hardware-float"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-cyan-400/15 to-pink-400/15 rounded-full blur-xl animate-hardware-float animation-delay-3000"></div>
+        <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-purple-400/10 to-blue-400/10 rounded-full blur-xl animate-pulse-gentle"></div>
         
         {/* Floating Hardware Elements */}
         {hardwareElements.map((element, index) => (
@@ -95,10 +95,10 @@ const About = () => {
                   <h3 className="text-lg font-black text-gray-900 group-hover:text-purple-800 transition-colors duration-500">Current Exploration</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {['Solana Development', 'DeFi APIs', 'AI Image Processing', 'Scalable React'].map((item, index) => (
+                  {['Cross-Chain dApps', 'Deep Learning Models', 'Scalable MERN Architectures', 'Next.js & Supabase'].map((item, index) => (
                     <div key={index} className="flex items-center space-x-2 group/item p-2 rounded-lg hover:bg-white/50 transition-all duration-500">
                       <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover/item:scale-125 group-hover/item:shadow-lg transition-all duration-500"></div>
-                      <span className="text-gray-700 font-semibold group-hover/item:text-purple-700 transition-colors duration-500 text-sm">{item}</span>
+                      <span className="text-gray-700 font-semibold group-hover/item:text-purple-700 transition-colors duration-500 text-sm md:text-xs xl:text-sm">{item}</span>
                     </div>
                   ))}
                 </div>

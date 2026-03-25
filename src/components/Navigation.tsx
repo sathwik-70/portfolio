@@ -7,27 +7,35 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // Debounced scroll listener for performance
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
-      const sections = ['hero', 'about', 'skills', 'projects', 'learning', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          
+          const sections = ['hero', 'about', 'skills', 'projects', 'learning', 'contact'];
+          const scrollPosition = window.scrollY + 100; // Offset for navbar height
+          
+          for (const section of sections) {
+            const element = document.getElementById(section);
+            if (element) {
+              const { offsetTop, offsetHeight } = element;
+              if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                setActiveSection(section);
+                break;
+              }
+            }
           }
-        }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -161,10 +169,10 @@ const Navigation = () => {
   return (
     <>
       {/* Fixed Navigation Header with Enhanced Colors */}
-      <nav className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 ${
+      <nav className={`fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 ${
         isScrolled 
-          ? 'bg-gradient-to-r from-slate-900/98 via-gray-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-3xl shadow-2xl shadow-cyan-500/30 border-b border-gradient-to-r from-cyan-400/40 via-purple-400/40 to-pink-400/40' 
-          : 'bg-gradient-to-r from-slate-900/90 via-gray-900/90 via-blue-900/90 to-purple-900/90 backdrop-blur-2xl shadow-lg shadow-blue-500/20'
+          ? 'bg-gradient-to-r from-slate-900/98 via-gray-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-md shadow-xl shadow-cyan-500/20 border-b border-cyan-500/20 lg:py-1' 
+          : 'bg-gradient-to-r from-slate-900/80 via-gray-900/80 via-blue-900/80 to-purple-900/80 backdrop-blur-sm shadow-md shadow-blue-500/10 py-3'
       }`}>
         {/* Animated Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 via-purple-500/5 to-pink-500/5 animate-gradient-shift"></div>
@@ -172,7 +180,10 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center justify-between h-20">
             {/* Enhanced Logo with Impressive Effects */}
-            <div className="flex-shrink-0 group cursor-pointer">
+            <div 
+              className="flex-shrink-0 group cursor-pointer"
+              onClick={() => scrollToSection('hero')}
+            >
               <div className="relative">
                 <span className="text-3xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
                   Sathwik Pamu
@@ -269,7 +280,7 @@ const Navigation = () => {
       {/* Spacer to prevent content from hiding behind fixed nav */}
       <div className="h-20"></div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes gradient-flow {
           0%, 100% { background-position: 0% 50%; }
           25% { background-position: 100% 50%; }

@@ -97,9 +97,9 @@ const Hero = () => {
         </div>
         
         {/* CPU Heat Sink Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-cyan-500/20 via-blue-500/15 via-purple-500/20 to-pink-500/15 rounded-full blur-2xl animate-cpu-heat"></div>
-        <div className="absolute top-3/4 right-1/4 w-[700px] h-[700px] bg-gradient-to-r from-purple-500/20 via-pink-500/15 via-rose-500/20 to-orange-500/15 rounded-full blur-2xl animate-cpu-heat animation-delay-3000"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-[500px] h-[500px] bg-gradient-to-r from-emerald-400/15 via-cyan-400/20 via-blue-400/15 to-indigo-400/20 rounded-full blur-2xl animate-cpu-heat animation-delay-6000"></div>
+        <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] md:w-[600px] md:h-[600px] bg-gradient-to-r from-cyan-500/20 via-blue-500/15 via-purple-500/20 to-pink-500/15 rounded-full blur-2xl animate-cpu-heat"></div>
+        <div className="absolute top-3/4 right-1/4 w-[300px] h-[300px] md:w-[700px] md:h-[700px] bg-gradient-to-r from-purple-500/20 via-pink-500/15 via-rose-500/20 to-orange-500/15 rounded-full blur-2xl animate-cpu-heat animation-delay-3000"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-[200px] h-[200px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-emerald-400/15 via-cyan-400/20 via-blue-400/15 to-indigo-400/20 rounded-full blur-2xl animate-cpu-heat animation-delay-6000"></div>
         
         {/* Data Flow Streams */}
         <div className="absolute inset-0 opacity-40">
@@ -137,7 +137,7 @@ const Hero = () => {
         ))}
         
         {/* Computer Terminal Panels */}
-        <div className="absolute top-20 right-20 w-80 h-48 bg-gradient-to-br from-gray-900/90 via-blue-900/80 to-purple-900/90 backdrop-blur-xl border border-cyan-400/40 rounded-2xl animate-terminal-glow shadow-2xl shadow-cyan-500/20">
+        <div className="hidden lg:block absolute top-20 right-20 w-80 h-48 bg-gradient-to-br from-gray-900/90 via-blue-900/80 to-purple-900/90 backdrop-blur-xl border border-cyan-400/40 rounded-2xl animate-terminal-glow shadow-2xl shadow-cyan-500/20">
           <div className="p-6 h-full flex flex-col justify-between relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent skew-x-12 animate-data-flow"></div>
             <div className="text-cyan-400 text-xs font-mono tracking-widest uppercase">System Monitor</div>
@@ -168,7 +168,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-32 left-16 w-72 h-44 bg-gradient-to-br from-gray-900/90 via-purple-900/80 to-pink-900/90 backdrop-blur-xl border border-purple-400/40 rounded-2xl animate-terminal-glow animation-delay-3000 shadow-2xl shadow-purple-500/20">
+        <div className="hidden lg:block absolute bottom-32 left-16 w-72 h-44 bg-gradient-to-br from-gray-900/90 via-purple-900/80 to-pink-900/90 backdrop-blur-xl border border-purple-400/40 rounded-2xl animate-terminal-glow animation-delay-3000 shadow-2xl shadow-purple-500/20">
           <div className="p-6 h-full flex flex-col justify-between relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/10 to-transparent skew-x-12 animate-data-flow animation-delay-2000"></div>
             <div className="text-purple-400 text-xs font-mono tracking-widest uppercase">Neural Processing</div>

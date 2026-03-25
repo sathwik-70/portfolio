@@ -91,8 +91,8 @@ const Contact = () => {
           <div className="circuit-pattern"></div>
         </div>
         
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-xl animate-hardware-float"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-cyan-400/10 to-pink-400/10 rounded-full blur-xl animate-hardware-float animation-delay-2000"></div>
+        <div className="absolute top-20 left-10 md:left-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-xl animate-hardware-float"></div>
+        <div className="absolute bottom-20 right-10 md:right-20 w-48 h-48 md:w-80 md:h-80 bg-gradient-to-r from-cyan-400/10 to-pink-400/10 rounded-full blur-xl animate-hardware-float animation-delay-2000"></div>
         
         {/* Floating Hardware Icons */}
         {hardwareElements.map((element, index) => (
