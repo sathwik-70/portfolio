@@ -83,7 +83,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
       {/* Hardware-Themed Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Circuit Board Pattern */}
@@ -91,8 +91,8 @@ const Contact = () => {
           <div className="circuit-pattern"></div>
         </div>
         
-        <div className="absolute top-20 left-10 md:left-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-xl animate-hardware-float"></div>
-        <div className="absolute bottom-20 right-10 md:right-20 w-48 h-48 md:w-80 md:h-80 bg-gradient-to-r from-cyan-400/10 to-pink-400/10 rounded-full blur-xl animate-hardware-float animation-delay-2000"></div>
+        <div className="absolute top-20 left-10 md:left-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-300/30 to-purple-300/30 rounded-full blur-xl animate-hardware-float"></div>
+        <div className="absolute bottom-20 right-10 md:right-20 w-48 h-48 md:w-80 md:h-80 bg-gradient-to-r from-pink-300/30 to-cyan-300/30 rounded-full blur-xl animate-hardware-float animation-delay-2000"></div>
         
         {/* Floating Hardware Icons */}
         {hardwareElements.map((element, index) => (
@@ -326,7 +326,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .circuit-pattern {
           background-image: 
             linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
