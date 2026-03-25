@@ -171,21 +171,21 @@ const Navigation = () => {
       {/* Fixed Navigation Header with Enhanced Colors */}
       <nav className={`fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 ${
         isScrolled 
-          ? 'bg-gradient-to-r from-slate-900/98 via-gray-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-md shadow-xl shadow-cyan-500/20 border-b border-cyan-500/20 lg:py-1' 
-          : 'bg-gradient-to-r from-slate-900/80 via-gray-900/80 via-blue-900/80 to-purple-900/80 backdrop-blur-sm shadow-md shadow-blue-500/10 py-3'
+          ? 'bg-gradient-to-r from-slate-900/98 via-gray-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-md shadow-xl shadow-cyan-500/20 border-b border-cyan-500/20' 
+          : 'bg-gradient-to-r from-slate-900/80 via-gray-900/80 via-blue-900/80 to-purple-900/80 backdrop-blur-sm shadow-md shadow-blue-500/10'
       }`}>
         {/* Animated Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 via-purple-500/5 to-pink-500/5 animate-gradient-shift"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-14">
             {/* Enhanced Logo with Impressive Effects */}
             <div 
               className="flex-shrink-0 group cursor-pointer"
               onClick={() => scrollToSection('hero')}
             >
               <div className="relative">
-                <span className="text-3xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
+                <span className="text-xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
                   Sathwik Pamu
                 </span>
                 <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400/30 via-purple-400/30 to-pink-400/30 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10 animate-pulse-glow"></div>
@@ -278,7 +278,7 @@ const Navigation = () => {
       </nav>
 
       {/* Spacer to prevent content from hiding behind fixed nav */}
-      <div className="h-20"></div>
+      <div className="h-14"></div>
 
       <style>{`
         @keyframes gradient-flow {
