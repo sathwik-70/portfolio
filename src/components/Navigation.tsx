@@ -178,14 +178,14 @@ const Navigation = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 via-purple-500/5 to-pink-500/5 animate-gradient-shift"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center justify-between h-14">
+          <div className="flex items-center justify-between h-16">
             {/* Enhanced Logo with Impressive Effects */}
             <div 
               className="flex-shrink-0 group cursor-pointer"
               onClick={() => scrollToSection('hero')}
             >
               <div className="relative">
-                <span className="text-xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
+                <span className="text-2xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
                   Sathwik Pamu
                 </span>
                 <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400/30 via-purple-400/30 to-pink-400/30 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10 animate-pulse-glow"></div>
@@ -278,7 +278,7 @@ const Navigation = () => {
       </nav>
 
       {/* Spacer to prevent content from hiding behind fixed nav */}
-      <div className="h-14"></div>
+      <div className="h-16"></div>
 
       <style>{`
         @keyframes gradient-flow {
