@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Code2, Blocks, Palette, CloudLightning, Zap, Brain, Star, Sparkles, Cpu, HardDrive, Monitor } from 'lucide-react';
+import { Code2, Blocks, Palette, CloudLightning, Brain, Star, Cpu, HardDrive, Monitor } from 'lucide-react';
 
 const Learning = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
@@ -60,7 +60,7 @@ const Learning = () => {
   ];
 
   return (
-    <section id="learning" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+    <section id="learning" className="py-12 sm:py-20 relative overflow-hidden">
       {/* Hardware-Themed Background */}
       <div className="absolute inset-0">
         {/* Circuit Board Pattern */}
@@ -89,7 +89,7 @@ const Learning = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-system-startup">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 relative">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-6 relative">
             <span className="text-3xl mr-3 animate-book-pulse">📚</span>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient-shift bg-300%">
               Currently Learning
@@ -103,11 +103,11 @@ const Learning = () => {
         </div>
 
         {/* Top Row - 3 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-4 sm:mb-5">
           {learningItems.slice(0, 3).map((item, index) => (
             <div
               key={index}
-              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105 hover:shadow-lg transform-gpu"
+              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105 hover:shadow-lg transform-gpu"
               onMouseEnter={() => setHoveredItem(index)}
               onMouseLeave={() => setHoveredItem(null)}
               style={{
@@ -168,11 +168,11 @@ const Learning = () => {
         </div>
 
         {/* Bottom Row - 2 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-10">
           {learningItems.slice(3).map((item, index) => (
             <div
               key={index + 3}
-              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105 hover:shadow-lg transform-gpu"
+              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105 hover:shadow-lg transform-gpu"
               onMouseEnter={() => setHoveredItem(index + 3)}
               onMouseLeave={() => setHoveredItem(null)}
               style={{
@@ -237,7 +237,7 @@ const Learning = () => {
 
         {/* Learning Philosophy */}
         <div className="text-center animate-text-fade animation-delay-1000">
-          <div className="relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/50 hover:border-gray-500/50 transition-all duration-500 hover:scale-105 transform-gpu">
+                <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-4 sm:p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105 transform-gpu shadow-xl">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-xl font-black text-white mb-3">
@@ -255,7 +255,7 @@ const Learning = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .circuit-pattern {
           background-image: 
             linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),

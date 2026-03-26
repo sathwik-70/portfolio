@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ChevronDown, Github, Linkedin, Mail, Code, Cpu, Blocks, Database, Brain, Zap, Sparkles, Star, Atom, Hexagon, Monitor, HardDrive, Wifi, Battery, MemoryStick } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, Code, Cpu, Blocks, Database, Brain, Star, Atom, Hexagon, Monitor, HardDrive, Wifi, Battery, MemoryStick } from 'lucide-react';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -197,7 +197,7 @@ const Hero = () => {
               <div className="absolute -inset-4 border border-cyan-400/30 rounded-full animate-rotate-slow"></div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 md:mb-8 relative leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 md:mb-8 relative leading-tight">
               <span className="text-white drop-shadow-xl tracking-tight">Hi, I'm </span>
               <div className="relative inline-block">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 via-pink-500 to-rose-500 bg-clip-text text-transparent animate-gradient-flow bg-400% font-black tracking-tight">

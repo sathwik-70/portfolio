@@ -192,7 +192,7 @@ const Navigation = () => {
               onKeyDown={(e) => e.key === 'Enter' && scrollToSection('hero')}
             >
               <div className="relative">
-                <span className="text-2xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
+                <span className="text-xl sm:text-2xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 via-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent animate-gradient-flow bg-400% group-hover:scale-110 transition-all duration-700 drop-shadow-2xl">
                   Sathwik Pamu
                 </span>
                 <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400/30 via-purple-400/30 to-pink-400/30 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10 animate-pulse-glow"></div>

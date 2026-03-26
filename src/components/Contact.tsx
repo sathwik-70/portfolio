@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Instagram, Send, MapPin, Clock, Coffee, Zap, MessageCircle, Cpu, HardDrive, Monitor } from 'lucide-react';
+import { Mail, Linkedin, Instagram, Send, MapPin, Clock, Coffee, Cpu, HardDrive, Monitor } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -83,7 +83,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+    <section id="contact" aria-label="Contact" className="py-12 sm:py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
       {/* Hardware-Themed Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Circuit Board Pattern */}
@@ -127,8 +127,8 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Info */}
-          <div className="lg:col-span-1 space-y-6 animate-slide-in-left">
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50 hover:shadow-xl hover:shadow-blue-500/15 transition-all duration-500 hover:scale-105 transform-gpu">
+          <div className="lg:col-span-1 space-y-4 sm:space-y-6 animate-slide-in-left">
+            <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg border border-white/50 hover:shadow-xl hover:shadow-blue-500/15 transition-all duration-500 hover:scale-105 transform-gpu">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <h3 className="text-xl font-black text-gray-900 mb-4">Contact Information</h3>
@@ -169,7 +169,7 @@ const Contact = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="relative bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-200/50 hover:shadow-xl hover:shadow-purple-500/15 transition-all duration-500 hover:scale-105 transform-gpu">
+            <div className="relative bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-blue-200/50 hover:shadow-xl hover:shadow-purple-500/15 transition-all duration-500 hover:scale-105 transform-gpu">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <h3 className="text-lg font-black text-gray-900 mb-4">Quick Info</h3>
@@ -189,12 +189,12 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2 animate-slide-in-right">
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50 hover:shadow-xl hover:shadow-blue-500/15 transition-all duration-500 transform-gpu">
+            <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg border border-white/50 hover:shadow-xl hover:shadow-blue-500/15 transition-all duration-500 transform-gpu">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <h3 className="text-2xl font-black text-gray-900 mb-4">Send me a message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-start">
                     <div className="group">
                       <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1 group-hover:text-blue-700 transition-colors duration-300">
                         Your Name

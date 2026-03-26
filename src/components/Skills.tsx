@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Code, Database, Brain, Blocks, Cloud, Monitor, Zap, Cpu, Star, Atom, Sparkles, HardDrive, Wifi, MemoryStick } from 'lucide-react';
+import { Code, Database, Brain, Blocks, Cloud, Monitor, Cpu, Star, HardDrive, MemoryStick } from 'lucide-react';
 import { 
   SiJavascript, SiTypescript, SiPython, SiCss, SiReact, SiNextdotjs, 
   SiTailwindcss, SiFramer, SiStreamlit, SiNodedotjs, SiExpress, SiFlask, 
@@ -14,15 +14,6 @@ import {
 
 const Skills = () => {
   const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   const skillCategories = [
     {

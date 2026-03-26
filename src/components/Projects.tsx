@@ -119,7 +119,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" aria-label="Projects" className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 relative overflow-hidden">
+    <section id="projects" aria-label="Projects" className="py-12 sm:py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 relative overflow-hidden">
       {/* Hardware-Themed Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Circuit Board Pattern */}
@@ -165,7 +165,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden border border-white/60 hover:border-gray-200/60 hover:scale-105 transform-gpu"
+              className="group relative bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden border border-white/60 hover:border-gray-200/60 hover:scale-105 transform-gpu p-4 sm:p-0"
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
               style={{
@@ -180,7 +180,7 @@ const Projects = () => {
               }}
             >
               {/* Project Header */}
-              <div className={`relative p-6 bg-gradient-to-r ${project.color} text-white overflow-hidden`}>
+              <div className={`relative p-4 sm:p-6 bg-gradient-to-r ${project.color} text-white overflow-hidden`}>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 
                 <div className="relative z-10 flex items-center justify-between mb-4">
@@ -228,7 +228,7 @@ const Projects = () => {
               </div>
 
               {/* Project Content */}
-              <div className="relative p-6 space-y-4">
+              <div className="relative p-4 sm:p-6 space-y-4">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-50/40 to-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-800"></div>
                 

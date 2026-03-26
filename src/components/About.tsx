@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Calendar, TrendingUp, BookOpen, Heart, Target, Sparkles, Zap, Star, Atom, Cpu, HardDrive, Monitor } from 'lucide-react';
+import { MapPin, Calendar, TrendingUp, BookOpen, Heart, Target, Sparkles, Zap, Star, Cpu, HardDrive, Monitor } from 'lucide-react';
 
 const About = () => {
   const stats = [
