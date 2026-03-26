@@ -115,8 +115,8 @@ const Hero = () => {
         <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-emerald-400 rounded-full blur-sm animate-led-pulse animation-delay-4500 shadow-emerald-400/50 shadow-2xl"></div>
       </div>
 
-      {/* Floating Hardware Components */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Floating Hardware Components - hidden on mobile to avoid text overlap */}
+      <div className="hidden sm:block absolute inset-0 overflow-hidden pointer-events-none">
         {hardwareElements.map((element, index) => (
           <div
             key={index}
@@ -232,17 +232,17 @@ const Hero = () => {
           </div>
 
           {/* Hardware-Styled CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-12 md:mb-20 animate-text-render animation-delay-2100">
+          <div className="flex flex-row gap-3 sm:gap-8 justify-center items-center mb-10 md:mb-20 animate-text-render animation-delay-2100">
             <button
               onClick={scrollToProjects}
-              className="group relative px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-cyan-500 via-blue-500 via-purple-600 to-pink-600 text-white font-bold text-base sm:text-lg rounded-2xl overflow-hidden transition-all duration-1000 hover:scale-110 transform-gpu w-full sm:w-auto"
+              className="group relative px-6 sm:px-12 py-3 sm:py-6 bg-gradient-to-r from-cyan-500 via-blue-500 via-purple-600 to-pink-600 text-white font-bold text-sm sm:text-lg rounded-2xl overflow-hidden transition-all duration-1000 hover:scale-110 transform-gpu flex-1 sm:flex-none max-w-[160px] sm:max-w-none"
               style={{
                 boxShadow: '0 20px 40px -8px rgba(59, 130, 246, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
               }}
             >
-              <span className="relative z-10 flex items-center space-x-3">
+              <span className="relative z-10 flex items-center justify-center space-x-2">
                 <span>View Projects</span>
-                <div className="w-3 h-3 bg-white rounded-full animate-ping"></div>
+                <div className="w-2 h-2 bg-white rounded-full animate-ping hidden sm:block"></div>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-blue-600 via-purple-700 to-pink-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 origin-left"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1200"></div>
@@ -251,12 +251,12 @@ const Hero = () => {
             
             <button
               onClick={scrollToContact}
-              className="group relative px-8 sm:px-12 py-4 sm:py-6 border-2 border-cyan-400/60 text-cyan-400 font-bold text-base sm:text-lg rounded-2xl transition-all duration-1000 hover:border-purple-400/60 hover:text-purple-400 hover:scale-110 backdrop-blur-xl bg-white/10 transform-gpu w-full sm:w-auto"
+              className="group relative px-6 sm:px-12 py-3 sm:py-6 border-2 border-cyan-400/60 text-cyan-400 font-bold text-sm sm:text-lg rounded-2xl transition-all duration-1000 hover:border-purple-400/60 hover:text-purple-400 hover:scale-110 backdrop-blur-xl bg-white/10 transform-gpu flex-1 sm:flex-none max-w-[160px] sm:max-w-none"
               style={{
                 boxShadow: '0 20px 40px -8px rgba(6, 182, 212, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}
             >
-              <span className="relative z-10">Contact Me</span>
+              <span className="relative z-10 text-center block">Contact Me</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/15 via-purple-400/15 to-pink-400/15 transform scale-0 group-hover:scale-100 transition-transform duration-1000 rounded-2xl"></div>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/40 via-purple-400/40 to-pink-400/40 rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-1000 -z-10"></div>
             </button>

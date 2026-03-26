@@ -126,7 +126,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-800"></div>
               <div className="relative z-10">
                 <h3 className="text-lg font-black text-gray-900 mb-6 text-center group-hover:text-blue-800 transition-colors duration-500">Quick Stats</h3>
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-2 gap-3">
                   {stats.map((stat, index) => (
                     <div key={index} className="group/stat flex items-start space-x-3 p-4 rounded-xl bg-gradient-to-r from-gray-50/90 to-blue-50/90 border border-gray-200/50 hover:shadow-md hover:shadow-blue-500/15 transition-all duration-500 hover:scale-105 transform-gpu">
                       <div className={`flex-shrink-0 p-2 bg-gradient-to-br ${stat.color} rounded-lg text-white group-hover/stat:scale-110 group-hover/stat:rotate-3 transition-all duration-500 shadow-md shadow-${stat.glow}-500/30`}>

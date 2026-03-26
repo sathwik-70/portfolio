@@ -209,12 +209,12 @@ const Skills = () => {
               </div>
               
               <div className="relative z-10">
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${category.color} text-white mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-${category.glowColor}-500/40`}>
+                <div className={`inline-flex p-2 sm:p-3 rounded-xl bg-gradient-to-r ${category.color} text-white mb-3 sm:mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-${category.glowColor}-500/40`}>
                   {category.icon}
                   <div className={`absolute inset-0 bg-gradient-to-r ${category.color} rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500 -z-10`}></div>
                 </div>
                 
-                <h3 className="text-lg font-black text-white mb-4 group-hover:text-gray-100 transition-colors duration-500">
+                <h3 className="text-base sm:text-lg font-black text-white mb-3 sm:mb-4 group-hover:text-gray-100 transition-colors duration-500">
                   {category.title}
                 </h3>
                 
@@ -222,7 +222,7 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="group/skill flex items-center space-x-2 px-3 py-2 bg-gray-900/40 rounded-lg border border-gray-700/50 hover:bg-white/10 hover:border-gray-500/50 transition-all duration-500 hover:scale-105 transform-gpu"
+                      className="group/skill flex items-center space-x-1.5 px-2 py-1.5 sm:px-3 sm:py-2 bg-gray-900/40 rounded-lg border border-gray-700/50 hover:bg-white/10 hover:border-gray-500/50 transition-all duration-500 hover:scale-105 transform-gpu"
                     >
                       <div className={`text-lg opacity-90 group-hover/skill:scale-110 group-hover/skill:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all duration-500`}>
                         {skill.icon}
