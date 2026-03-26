@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Learning from './components/Learning';
-import Contact from './components/Contact';
+
+// Lazy load below-fold sections for faster initial paint
+const About = lazy(() => import('./components/About'));
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
+const Learning = lazy(() => import('./components/Learning'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   return (
@@ -13,11 +15,13 @@ function App() {
       <Navigation />
       <main id="main-content" aria-label="Main content">
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Learning />
-        <Contact />
+        <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-cyan-50 to-indigo-50" />}>
+          <About />
+          <Skills />
+          <Projects />
+          <Learning />
+          <Contact />
+        </Suspense>
       </main>
       
       {/* Ultra-Premium Footer */}
