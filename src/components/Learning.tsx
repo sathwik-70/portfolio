@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Code2, Blocks, Palette, CloudLightning, Brain, Star, Cpu, HardDrive, Monitor } from 'lucide-react';
+import { useState } from 'react';
+import { Code2, Blocks, Palette, CloudLightning, Brain, Star, Cpu, HardDrive, Monitor, BookOpen } from 'lucide-react';
 
 const Learning = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
@@ -89,8 +89,10 @@ const Learning = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-system-startup">
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-6 relative">
-            <span className="text-3xl mr-3 animate-book-pulse">📚</span>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-6 relative flex items-center justify-center">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-3 shadow-lg shadow-cyan-500/30 animate-book-pulse">
+              <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+            </div>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient-shift bg-300%">
               Currently Learning
             </span>

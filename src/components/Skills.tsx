@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Code, Database, Brain, Blocks, Cloud, Monitor, Cpu, Star, HardDrive, MemoryStick } from 'lucide-react';
+import { useState } from 'react';
+import { Code, Database, Brain, Blocks, Cloud, Monitor, Cpu, Star, HardDrive, MemoryStick, Terminal } from 'lucide-react';
 import { 
-  SiJavascript, SiTypescript, SiPython, SiCss, SiReact, SiNextdotjs, 
+  SiJavascript, SiTypescript, SiPython, SiCss, SiHtml5, SiReact, SiNextdotjs, 
   SiTailwindcss, SiFramer, SiStreamlit, SiNodedotjs, SiExpress, SiFlask, 
   SiMongodb, SiMysql, SiFirebase, SiTensorflow, SiPytorch, SiOpencv, 
   SiScikitlearn, SiNumpy, SiPandas, SiSolana, SiNetlify, SiRender, 
@@ -27,6 +27,7 @@ const Skills = () => {
         { name: 'Python', icon: <SiPython color="#3776AB" /> },
         { name: 'Java', icon: <FaJava color="#ED8B00" /> },
         { name: 'SQL', icon: <FaDatabase color="#4479A1" /> },
+        { name: 'HTML', icon: <SiHtml5 color="#E34F26" /> },
         { name: 'CSS', icon: <SiCss color="#1572B6" /> }
       ],
       bgPattern: 'code'
@@ -162,8 +163,10 @@ const Skills = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-system-startup">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 relative">
-            <span className="text-3xl mr-3 animate-tech-bounce">💻</span>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 relative flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 shadow-lg shadow-cyan-500/30 animate-tech-bounce">
+              <Terminal className="w-6 h-6 text-white" />
+            </div>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-flow bg-300%">
               Tech I Work With
             </span>

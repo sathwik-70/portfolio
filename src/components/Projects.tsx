@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Github, ExternalLink, CheckCircle2, Clock, Mic, Brain, Coins, BookOpen, Home, QrCode, Star, Cpu, HardDrive, Monitor, Eye, GraduationCap } from 'lucide-react';
+import { useState } from 'react';
+import { Github, ExternalLink, CheckCircle2, Clock, Mic, Brain, Coins, BookOpen, Home, QrCode, Star, Cpu, HardDrive, Monitor, Eye, GraduationCap, Rocket } from 'lucide-react';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -147,8 +147,10 @@ const Projects = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-system-startup">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 relative">
-            <span className="text-3xl mr-3 animate-project-pulse">🚀</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 relative flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 shadow-lg shadow-indigo-500/30 animate-project-pulse">
+              <Rocket className="w-6 h-6 text-white" />
+            </div>
             <span className="bg-gradient-to-r from-gray-900 via-blue-800 via-purple-800 to-pink-800 bg-clip-text text-transparent">
               Projects I've Built
             </span>

@@ -71,7 +71,7 @@ const Contact = () => {
   ];
 
   const quickInfo = [
-    { icon: <MapPin className="w-4 h-4" />, text: 'Based in India 🇮🇳', color: 'text-blue-600' },
+    { icon: <MapPin className="w-4 h-4" />, text: 'Based in India', color: 'text-blue-600' },
     { icon: <Clock className="w-4 h-4" />, text: 'Usually responds within 24 hours', color: 'text-purple-600' },
     { icon: <Coffee className="w-4 h-4" />, text: 'Always up for a tech discussion', color: 'text-orange-600' },
   ];
@@ -111,8 +111,10 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 animate-system-startup">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 relative">
-            <span className="text-3xl mr-2 animate-mail-bounce">📫</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 relative flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 shadow-lg shadow-blue-500/30 animate-mail-bounce">
+              <Send className="w-6 h-6 text-white" />
+            </div>
             <span className="bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
               Get in Touch
             </span>
@@ -126,8 +128,8 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contact Info */}
-          <div className="lg:col-span-1 space-y-4 sm:space-y-6 animate-slide-in-left">
+          {/* Contact Info (Hidden on Mobile) */}
+          <div className="hidden md:block lg:col-span-1 space-y-4 sm:space-y-6 animate-slide-in-left">
             <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg border border-white/50 hover:shadow-xl hover:shadow-blue-500/15 transition-all duration-500 hover:scale-105 transform-gpu">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">

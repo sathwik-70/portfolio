@@ -1,10 +1,9 @@
-import React from 'react';
-import { MapPin, Calendar, TrendingUp, BookOpen, Heart, Target, Sparkles, Zap, Star, Cpu, HardDrive, Monitor } from 'lucide-react';
+import { MapPin, Calendar, TrendingUp, BookOpen, Heart, Target, Sparkles, Zap, Star, Cpu, HardDrive, Monitor, Terminal } from 'lucide-react';
 
 const About = () => {
   const stats = [
     { icon: <BookOpen size={20} />, label: 'Status', value: 'Final Year B.Tech Student', color: 'from-blue-500 to-cyan-500', glow: 'blue' },
-    { icon: <MapPin size={20} />, label: 'Location', value: 'India 🇮🇳', color: 'from-green-500 to-emerald-500', glow: 'emerald' },
+    { icon: <MapPin size={20} />, label: 'Location', value: 'India', color: 'from-green-500 to-emerald-500', glow: 'emerald' },
     { icon: <TrendingUp size={20} />, label: 'Focus', value: 'Web Dev, AI/ML, Blockchain', color: 'from-purple-500 to-pink-500', glow: 'purple' },
     { icon: <Calendar size={20} />, label: 'Learning Since', value: '2021', color: 'from-orange-500 to-red-500', glow: 'orange' },
   ];
@@ -53,9 +52,11 @@ const About = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-system-startup">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 relative">
-            <span className="text-3xl mr-3 animate-wave-pulse">👨‍💻</span>
-            <span className="bg-gradient-to-r from-gray-900 via-blue-800 via-purple-800 to-pink-800 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 relative flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 shadow-lg shadow-blue-500/30 animate-wave-pulse">
+              <Terminal className="w-6 h-6 text-white" />
+            </div>
+            <span className="bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
               About Me
             </span>
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-xl -z-10 animate-pulse-gentle"></div>
@@ -77,7 +78,7 @@ const About = () => {
                   <h3 className="text-lg font-black text-gray-900 group-hover:text-blue-800 transition-colors duration-500">My Journey</h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-500 font-medium">
-                  A passionate student developer from India 🇮🇳. I love transforming ideas into scalable, 
+                  A passionate student developer from India. I love transforming ideas into scalable, 
                   practical solutions through code. My journey spans across web development, AI-based 
                   applications, and blockchain technology.
                 </p>

@@ -191,7 +191,9 @@ const Hero = () => {
           {/* Hardware-Themed Main Content */}
           <div className="mb-12 animate-system-boot">
             <div className="inline-block mb-8 relative">
-              <span className="text-6xl animate-power-on filter drop-shadow-2xl">💻</span>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center filter drop-shadow-2xl border border-cyan-500/30 animate-power-on relative z-10 mx-auto">
+                <Monitor className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400 drop-shadow-[0_0_15px_rgba(6,182,212,0.8)]" />
+              </div>
               <div className="absolute -inset-8 bg-gradient-to-r from-cyan-400/40 via-purple-400/30 via-pink-400/40 to-rose-400/30 rounded-full blur-xl animate-hardware-glow"></div>
               <div className="absolute -inset-6 bg-gradient-to-r from-white/20 to-transparent rounded-full animate-ping opacity-30"></div>
               <div className="absolute -inset-4 border border-cyan-400/30 rounded-full animate-rotate-slow"></div>
@@ -232,10 +234,10 @@ const Hero = () => {
           </div>
 
           {/* Hardware-Styled CTA Buttons */}
-          <div className="flex flex-row gap-3 sm:gap-8 justify-center items-center mb-10 md:mb-20 animate-text-render animation-delay-2100">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-center items-center mb-10 md:mb-20 animate-text-render animation-delay-2100 w-full max-w-3xl mx-auto px-4">
             <button
               onClick={scrollToProjects}
-              className="group relative px-6 sm:px-12 py-3 sm:py-6 bg-gradient-to-r from-cyan-500 via-blue-500 via-purple-600 to-pink-600 text-white font-bold text-sm sm:text-lg rounded-2xl overflow-hidden transition-all duration-1000 hover:scale-110 transform-gpu flex-1 sm:flex-none max-w-[160px] sm:max-w-none"
+              className="group relative px-6 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-500 via-blue-500 via-purple-600 to-pink-600 text-white font-bold text-sm sm:text-base rounded-2xl overflow-hidden transition-all duration-1000 hover:scale-105 transform-gpu w-full sm:w-auto"
               style={{
                 boxShadow: '0 20px 40px -8px rgba(59, 130, 246, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
               }}
@@ -251,7 +253,7 @@ const Hero = () => {
             
             <button
               onClick={scrollToContact}
-              className="group relative px-6 sm:px-12 py-3 sm:py-6 border-2 border-cyan-400/60 text-cyan-400 font-bold text-sm sm:text-lg rounded-2xl transition-all duration-1000 hover:border-purple-400/60 hover:text-purple-400 hover:scale-110 backdrop-blur-xl bg-white/10 transform-gpu flex-1 sm:flex-none max-w-[160px] sm:max-w-none"
+              className="group relative px-6 sm:px-10 py-4 sm:py-5 border-2 border-cyan-400/60 text-cyan-400 font-bold text-sm sm:text-base rounded-2xl transition-all duration-1000 hover:border-purple-400/60 hover:text-purple-400 hover:scale-105 backdrop-blur-xl bg-white/10 transform-gpu w-full sm:w-auto"
               style={{
                 boxShadow: '0 20px 40px -8px rgba(6, 182, 212, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}
@@ -260,6 +262,20 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/15 via-purple-400/15 to-pink-400/15 transform scale-0 group-hover:scale-100 transition-transform duration-1000 rounded-2xl"></div>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/40 via-purple-400/40 to-pink-400/40 rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-1000 -z-10"></div>
             </button>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-6 sm:px-10 py-4 sm:py-5 border-2 border-purple-400/60 text-purple-400 font-bold text-sm sm:text-base rounded-2xl transition-all duration-1000 hover:border-pink-400/60 hover:text-pink-400 hover:scale-105 backdrop-blur-xl bg-white/10 transform-gpu w-full sm:w-auto flex items-center justify-center"
+              style={{
+                boxShadow: '0 20px 40px -8px rgba(168, 85, 247, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
+              <span className="relative z-10 text-center block">View Resume</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/15 via-pink-400/15 to-rose-400/15 transform scale-0 group-hover:scale-100 transition-transform duration-1000 rounded-2xl"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-400/40 via-pink-400/40 to-rose-400/40 rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-1000 -z-10"></div>
+            </a>
           </div>
 
           {/* Hardware-Themed Social Links */}
