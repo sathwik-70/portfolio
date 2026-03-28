@@ -172,7 +172,7 @@ const Navigation = () => {
       <nav
         role="navigation"
         aria-label="Main navigation"
-        className={`fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 ${
+        className={`fixed md:absolute top-0 left-0 right-0 z-[9998] transition-all duration-300 ${
         isScrolled 
           ? 'bg-gradient-to-r from-slate-900/98 via-gray-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-md shadow-xl shadow-cyan-500/20 border-b border-cyan-500/20' 
           : 'bg-gradient-to-r from-slate-900/80 via-gray-900/80 via-blue-900/80 to-purple-900/80 backdrop-blur-sm shadow-md shadow-blue-500/10'
@@ -286,8 +286,8 @@ const Navigation = () => {
         </div>
       </nav>
 
-      {/* Spacer to prevent content from hiding behind fixed nav */}
-      <div className="h-16"></div>
+      {/* Spacer to prevent content from hiding behind fixed nav on mobile */}
+      <div className="h-16 md:hidden"></div>
 
       <style>{`
         @keyframes gradient-flow {
